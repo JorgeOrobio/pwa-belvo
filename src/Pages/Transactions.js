@@ -42,7 +42,6 @@ export default function Transactions(props) {
 
     const getTransactions = async () => {
         await initializeData();
-        console.log(transactionsRow)
     }
 
     let today = new Date()
@@ -67,7 +66,8 @@ export default function Transactions(props) {
                     <Button variant="outlined" onClick={(e) => { getTransactions() }}>Get Transactions</Button>
                 </Grid>
             </Grid>
-            {valid? Tabletransactions(transactionsRow):null}
+            
+                {valid? Tabletransactions(transactionsRow):null}
 
         </ThemeProvider>
     )

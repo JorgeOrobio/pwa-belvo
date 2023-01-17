@@ -15,7 +15,7 @@ export const retrieveTransactions = async (data, setTransactionsRow, setValid) =
 	await axios(config)
 		.then((response) => {
 			setTransactionsRow(response.data);
-			if (response.status === 200 && response.data.length > 0) {
+			if (response.status === 201 && response.data.length > 0) {
 				setValid(true)
 			}
 			console.log(response)
